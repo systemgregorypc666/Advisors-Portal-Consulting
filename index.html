@@ -15,19 +15,8 @@
         .card { padding: 25px; border: 1px solid #eee; border-radius: 10px; transition: 0.3s; border-top: 4px solid var(--primary); }
         .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         .price-tag { font-size: 2em; color: var(--secondary); font-weight: bold; margin: 15px 0; }
+        .btn-pay { display: block; background: var(--secondary); color: white; text-align: center; padding: 20px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2em; margin-top: 20px; }
         footer { text-align: center; padding: 40px; font-size: 0.9em; color: #666; }
-        
-        /* Contenedor personalizado para centrar los botones inteligentes de PayPal */
-        .paypal-btn-wrapper {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            min-height: 50px;
-        }
-        .paypal-btn-container {
-            width: 100%;
-            max-width: 350px;
-        }
     </style>
 </head>
 <body>
@@ -73,11 +62,8 @@
             <div class="price-tag">Total Investment: $1,700 USD</div>
             <p>Immediate activation of legal and technical services.</p>
             
-            <!-- ====== PASARELA DE PAGO INTELIGENTE DE PAYPAL ====== -->
-            <div class="paypal-btn-wrapper">
-                <div id="paypal-container-FUMESH38VZ6F4" class="paypal-btn-container"></div>
-            </div>
-            <!-- =================================================== -->
+            <!-- Botón clásico que abre la ventana de PayPal configurada -->
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FUMESH38VZ6F4" target="_blank" class="btn-pay">START YOUR BUSINESS NOW</a>
         </div>
     </section>
 </div>
@@ -87,16 +73,6 @@
     <p>Technical Infrastructure by <strong>System Gregory PC</strong></p>
     <p>San Cristóbal, Venezuela | Detroit, Michigan</p>
 </footer>
-
-<!-- SDK Principal de PayPal (Carga los scripts e inhabilita Venmo) -->
-<script src="https://www.paypal.com/sdk/js?client-id=BAApax2HPz958-_joLngtt1BsX5ofYox-d1_GAV2m8kFak__xQaOpx070FCxrEkjIAuGMzNAwFXMxs7-Bk&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-
-<!-- Script de Renderizado para el Botón Específico FUMESH38VZ6F4 -->
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "FUMESH38VZ6F4",
-  }).render("#paypal-container-FUMESH38VZ6F4");
-</script>
 
 </body>
 </html>
